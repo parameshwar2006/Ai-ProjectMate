@@ -4,13 +4,13 @@
   "description": "AI-powered collaboration platform for college students",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"tsx watch server/index.ts\" \"vite\"",
-    "dev:client": "vite",
-    "dev:server": "tsx watch server/index.ts",
-    "build": "tsc && node ./node_modules/vite/bin/vite.js build",
-    "seed": "tsx server/db/seed.ts",
-    "start": "tsx server/index.ts"
-  },
+  "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"tsx watch server/index.ts\" \"vite\"",
+  "dev:client": "vite",
+  "dev:server": "tsx watch server/index.ts",
+  "build": "tsc && node ./node_modules/vite/bin/vite.js build",
+  "seed": "tsx server/db/seed.ts",
+  "start": "node --import tsx server/index.ts"
+},
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "canvas-confetti": "^1.9.4",
